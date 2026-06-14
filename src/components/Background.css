@@ -1,0 +1,117 @@
+/* ========================================================= */
+/* 🖥️ BACKGROUND CONTAINER - MONOCHROME PRO */
+/* ========================================================= */
+
+.bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  transition: background 0.5s ease;
+  background-color: var(--bg); /* Uses variable from our main CSS */
+}
+
+/* ========================================================= */
+/* 🌙 DARK THEME — DEEP SPACE OBSIDIAN */
+/* ========================================================= */
+
+body[data-theme="dark"] .bg-container {
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 80%),
+    #0a0a0b; /* Matches your main CSS --bg */
+}
+
+/* ========================================================= */
+/* ☀️ LIGHT THEME — STUDIO WHITE */
+/* ========================================================= */
+
+body[data-theme="light"] .bg-container {
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.02) 0%, transparent 80%),
+    #ffffff;
+}
+
+/* ========================================================= */
+/* ⭐ PARTICLE LAYERS (REPLACES STARS) */
+/* ========================================================= */
+
+.star-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+/* MICRO PARTICLES (Dust/Data) */
+.layer-1 {
+  background-image: radial-gradient(
+    1px 1px at 10px 10px,
+    var(--muted), 
+    transparent
+  );
+  background-size: 80px 80px;
+  opacity: 0.15;
+  animation: moveParticles 180s linear infinite;
+}
+
+/* MEDIUM SPECKS */
+.layer-2 {
+  background-image: radial-gradient(
+    1.2px 1.2px at 40px 40px,
+    var(--primary), 
+    transparent
+  );
+  background-size: 200px 200px;
+  opacity: 0.1;
+  animation: moveParticles 120s linear infinite reverse;
+}
+
+/* SOFT GLOW POINTS */
+.layer-3 {
+  background-image: radial-gradient(
+    2px 2px at 100px 100px,
+    var(--primary), 
+    transparent
+  );
+  background-size: 400px 400px;
+  opacity: 0.05;
+  animation: moveParticles 250s linear infinite;
+}
+
+/* ========================================================= */
+/* ✨ GRID OVERLAY (The "Developer" Signature) */
+/* ========================================================= */
+
+.nebula-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Subtle grid lines for a technical feel */
+  background-image: 
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 100px 100px;
+  opacity: 0.15;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+
+/* ========================================================= */
+/* 🎬 ANIMATIONS */
+/* ========================================================= */
+
+@keyframes moveParticles {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-400px, -400px); }
+}
+
+@keyframes twinkle {
+  from { opacity: 0.05; }
+  to { opacity: 0.2; }
+}

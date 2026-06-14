@@ -1,0 +1,74 @@
+/* Default browser cursor */
+html, body {
+  cursor: auto;
+}
+
+/* Hand pointer on clickable elements */
+a, button, .nav-btn, .project-card, .github-btn, input, textarea {
+  cursor: pointer;
+}
+
+/* SMALL DOT */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #c084fc;
+  box-shadow: 0 0 15px #c084fc;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* OUTER RING */
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(192,132,252,0.4);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.12s ease-out, width 0.3s, height 0.3s;
+  background-color: rgba(192,132,252,0.02);
+  backdrop-filter: blur(1px);
+}
+
+/* POINTER HOVER EFFECT */
+.cursor-dot.pointer {
+  width: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px #ffffff;
+}
+
+.cursor-outline.pointer {
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* CLICK EFFECT */
+.cursor-dot.clicking {
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+.cursor-outline.clicking {
+  transform: translate(-50%, -50%) scale(1.4);
+  border-color: #c084fc;
+}
+
+/* Disable custom cursor on mobile */
+@media (max-width:768px){
+  .cursor-dot,
+  .cursor-outline{
+    display:none;
+  }
+
+  html, body{
+    cursor:auto;
+  }
+}

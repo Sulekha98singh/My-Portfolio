@@ -1,0 +1,172 @@
+/* =========================
+   1. RESET & BASE
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   2. THEME VARIABLES (PRO MONOCHROME)
+========================= */
+:root {
+    /* DARK THEME (Default) */
+    --bg: #0a0a0b;           /* Rich Obsidian */
+    --bg-light: #121214;     /* Surface Elevation */
+    --border: #262626;       /* Clean borders */
+    
+    --primary: #ffffff;      /* High contrast accent */
+    --text: #ededed;         /* Primary text */
+    --muted: #a1a1aa;        /* Secondary/description text */
+
+    /* GLASS DESIGN */
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+
+    --navbar-height: 80px;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* LIGHT THEME OVERRIDE */
+body[data-theme="light"] {
+    --bg: #ffffff;           /* Paper White */
+    --bg-light: #f5f5f7;     /* Soft Studio Gray */
+    --border: #e5e5e5;
+    
+    --primary: #000000;      /* Ink Black */
+    --text: #111111;
+    --muted: #666666;
+
+    --glass-bg: rgba(0, 0, 0, 0.02);
+    --glass-border: rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   3. BODY & TYPOGRAPHY
+========================= */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    transition: background var(--transition), color var(--transition);
+    overflow-x: hidden;
+}
+
+/* Developer Look: Mono font for code-like elements */
+code, .mono {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+    color: var(--primary);
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* =========================
+   4. LAYOUT COMPONENTS
+========================= */
+section {
+    padding: 100px 8%;
+    scroll-margin-top: var(--navbar-height);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Glassmorphism Card Utility */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+/* =========================
+   5. NAVIGATION (STUCK TO TOP)
+========================= */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--navbar-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    background: rgba(var(--bg), 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+/* =========================
+   6. INTERACTIVE ELEMENTS
+========================= */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--primary);
+    color: var(--bg);
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* =========================
+   7. MOBILE RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+    section {
+        padding: 80px 6%;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --navbar-height: 70px;
+    }
+    
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    
+    section {
+        padding: 60px 5%;
+    }
+}
+
+/* =========================
+   8. UTILITIES
+========================= */
+.text-muted { color: var(--muted); }
+.border-top { border-top: 1px solid var(--border); }
+.mt-2 { margin-top: 1rem; }

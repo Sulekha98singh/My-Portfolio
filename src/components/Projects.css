@@ -1,0 +1,188 @@
+.projects{
+position:relative;
+padding:6rem 1.5rem;
+overflow:hidden;
+}
+
+/* HEADER */
+
+.projects-header{
+text-align:center;
+margin-bottom:4rem;
+}
+
+.section-title{
+font-size:2.8rem;
+font-weight:700;
+
+background:linear-gradient(135deg,var(--text),var(--muted));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.underline{
+width:80px;
+height:4px;
+margin:12px auto 0;
+
+background:linear-gradient(135deg,#8f94fb,#ff9bd5);
+border-radius:2px;
+}
+
+/* TIMELINE */
+
+.timeline{
+position:relative;
+max-width:1100px;
+margin:auto;
+}
+
+/* Vertical Line */
+
+.timeline::before{
+content:"";
+position:absolute;
+left:22px;
+top:0;
+bottom:0;
+width:2px;
+background:var(--glass-border);
+}
+
+/* ITEM */
+
+.timeline-item{
+position:relative;
+margin-bottom:3rem;
+padding-left:60px;
+}
+
+/* Dot */
+
+.timeline-dot{
+position:absolute;
+left:14px;
+top:6px;
+
+width:16px;
+height:16px;
+
+background:linear-gradient(135deg,#8f94fb,#ff9bd5);
+
+border-radius:50%;
+box-shadow:0 0 12px rgba(143,148,251,.6);
+}
+
+/* CONTENT CARD */
+
+.timeline-content{
+background:var(--glass-bg);
+border:1px solid var(--glass-border);
+
+border-radius:18px;
+padding:24px;
+
+backdrop-filter:blur(14px);
+
+transition:all .3s ease;
+}
+
+/* Hover */
+
+.timeline-content:hover{
+transform:translateY(-6px);
+
+border-color:#8f94fb;
+
+box-shadow:
+0 10px 30px rgba(143,148,251,.25),
+0 0 20px rgba(255,155,213,.2);
+}
+
+/* TEXT */
+
+.timeline-content h3{
+margin-bottom:10px;
+font-size:1.35rem;
+font-weight:700;
+color:var(--text);
+
+word-break:break-word;
+}
+
+.timeline-content p{
+color:var(--muted);
+margin-bottom:14px;
+line-height:1.6;
+}
+
+/* TECH TAGS */
+
+.tech-stack{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-bottom:12px;
+}
+
+.tech-tag{
+padding:5px 12px;
+font-size:.85rem;
+
+background:var(--glass-bg);
+border:1px solid var(--glass-border);
+
+border-radius:20px;
+color:var(--text);
+}
+
+/* LINK */
+
+.project-link{
+display:inline-block;
+margin-top:6px;
+
+color:#8f94fb;
+font-weight:600;
+text-decoration:none;
+
+transition:.2s ease;
+}
+
+.project-link:hover{
+color:#ff9bd5;
+transform:translateX(3px);
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.timeline::before{
+left:12px;
+}
+
+.timeline-item{
+padding-left:45px;
+}
+
+.timeline-dot{
+left:4px;
+}
+
+.section-title{
+font-size:2.2rem;
+}
+
+.timeline-content{
+padding:18px;
+}
+
+.timeline-content h3{
+font-size:1.15rem;
+}
+
+.timeline-content p{
+font-size:.95rem;
+}
+}

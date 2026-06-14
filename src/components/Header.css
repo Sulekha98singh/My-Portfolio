@@ -1,0 +1,145 @@
+/* main navbar container */
+.Header{
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 92%;
+  max-width: 1200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 28px;
+
+  border-radius: 50px;
+  
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid var(--border);
+
+  z-index: 1000;
+}
+.Header{
+  
+  background: var(--glass-bg);   /* ⭐ change */
+  border: 1px solid var(--glass-border);
+}
+
+/* logo */
+.logo{
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* navigation links */
+.nav-links{
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.nav-links li{
+  display: flex;
+}
+
+.nav-links a{
+  text-decoration: none;
+  font-size: 15px;
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover{
+  color: #00f7ff;
+}
+
+/* right side */
+.right-section{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* social links container */
+.social-links{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* social icons */
+.social-links a{
+  font-size: 18px;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover{
+  color: #00f7ff;
+  transform: translateY(-2px) scale(1.15);
+}
+
+/* ========================= */
+/* THEME SWITCH */
+/* ========================= */
+
+.theme-switch {
+  width: 80px;
+  height: 40px;
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 4px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.theme-switch:hover {
+  transform: scale(1.05);
+}
+
+/* slider */
+.switch {
+  width: 30px;
+  height: 30px;
+  border-radius: 60%;
+  background: linear-gradient(135deg,#ff8c42,#ff6b1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.35s ease;
+}
+
+/* dark position */
+.switch.dark {
+  transform: translateX(0);
+}
+
+/* light position */
+.switch.light {
+  transform: translateX(34px);
+}
+
+/* icon */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* responsive (important) */
+@media (max-width: 900px){
+
+  .nav-links{
+    display: none;
+  }
+
+}

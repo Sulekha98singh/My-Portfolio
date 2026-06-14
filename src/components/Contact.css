@@ -1,0 +1,110 @@
+.contact-page {
+  padding: 60px 8%;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.contact-left h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+/* Description */
+
+.contact-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #bdbdbd;
+  margin-bottom: 30px;
+}
+
+/* Email Box */
+
+.email-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 14px 18px;
+
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  margin-bottom: 30px;
+}
+
+.email-box:hover {
+  border-color: #8f94fb;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.email-icon {
+  font-size: 18px;
+}
+
+.email-text {
+  flex: 1;
+  margin-left: 10px;
+  word-break: break-word;
+}
+
+.copy-icon {
+  opacity: 0.7;
+}
+
+/* Social Links */
+
+.socials {
+  display: flex;
+  gap: 20px;
+  font-size: 28px;
+}
+
+.socials a {
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  color: #8f94fb;
+  transform: translateY(-4px);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 50px 6%;
+  }
+
+  .contact-left h1 {
+    font-size: 34px;
+  }
+
+  .contact-description {
+    font-size: 15px;
+  }
+
+  .email-box {
+    padding: 12px 16px;
+  }
+
+  .email-text {
+    font-size: 14px;
+  }
+
+  .socials {
+    font-size: 24px;
+    gap: 16px;
+  }
+}
