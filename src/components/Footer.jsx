@@ -25,15 +25,7 @@ const Footer = () => {
         {/* Social Links - Reverted to your specified handles */}
         <div className="footer-social">
 
-          <a href="https://github.com/Sulekha98singh" target="_blank" rel="noreferrer">
-            <FaGithub />
-          </a>
-
-          <a href="https://www.linkedin.com/in/sulekha-singh-646490338/" target="_blank" rel="noreferrer">
-            <FaLinkedin />
-          </a>
-
-          <a href="mailto:sulekha.23271@knit.ac.in">
+         <a href="mailto:sulekha.23271@knit.ac.in">
             <FaEnvelope />
           </a>
 
